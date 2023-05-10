@@ -12,7 +12,6 @@ public class CommunityPollPage extends Utils{
     private By _votepoll1  = By.id("vote-poll-1");
     public void enterCommunityPollDetails() {
         //click on good button
-       // clickOnElement(_pollanswers2);
         clickOnElement(_pollanswers2);
         //clickOnElement(_inputstartswithidpollanswers);
         //Click on vote button

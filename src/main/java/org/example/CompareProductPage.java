@@ -20,7 +20,6 @@ public void VerifyToDetailsOfCompareProduct(){
     clickOnElement(_GiftCards);
     clickOnElement(_$25VirtualGiftCard);
     //click compare product
-    //clickOnElement(By.xpath("//div[@class='compare-products']/button"));
     clickOnElement(_buttoncontainsclassbutton2addtocomparelistbutton);
     //product comparison
     clickOnElement(_productcomparison);

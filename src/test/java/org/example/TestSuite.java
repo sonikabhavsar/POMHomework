@@ -16,6 +16,13 @@ public class TestSuite extends BaseTest{
     CompareProductPage compareProductPage = new CompareProductPage();
     CompareProductResultPage compareProductResultPage = new CompareProductResultPage();
     LoginPage loginPage =new LoginPage();
+    NewReleaseNewsDetailsPage newReleaseNewsDetailsPage =new NewReleaseNewsDetailsPage();
+    BuildYourOwnComputerDetailsPage buildYourOwnComputerDetailsPage =new BuildYourOwnComputerDetailsPage();
+    NewReleaseNewsResultPage newReleaseNewsResultPage = new NewReleaseNewsResultPage();
+    BuildYourOwnComputerResultPage buildYourOwnComputerResultPage =new BuildYourOwnComputerResultPage();
+    CheckOutAsGuest checkOutAsGuest =new CheckOutAsGuest();
+    OrderConformationPage orderConformationPage = new OrderConformationPage();
+    FacebookPage facebookPage = new FacebookPage();
     @Test
     public void VerifyUserShouldBeAbleToRegisterSuccessfully(){
         //click on register button
@@ -86,4 +93,52 @@ public class TestSuite extends BaseTest{
         //click on vote button
         communityPollResultPage.verifyUserVotesSuccessfully();
     }
+@Test
+    public void VerifyUserShouldBeAblePrintProductList(){
+        homePage.printOutForTheTitle();
+}
+@Test
+    public void VerifyUserShouldSeePopUpMessage(){
+        homePage.verifyPrintPopUpMessage();
+}
+@Test
+    public void VerifyUserShouldBeAbleToSeeVotePopUpMessage(){
+        homePage.verifyToPrintVoteAlertMessage();
+}
+@Test
+   public void VerifyUserShouldBeAbleToSeeNewReleaseNews(){
+        homePage.verifyToSeeNewReleaseNews();
+        newReleaseNewsDetailsPage.verifyUserSeeNewReleaseDetails();
+        newReleaseNewsResultPage.verifyUserSeeNewReleaseNewsResultSuccessfully();
+}
+@Test
+public void VerifyUserShouldBeAbleToSelectCurrency(){
+        homePage.verifySelectCurrency();
+
+}
+@Test
+public void VerifyUserShouldBeAbleToSelectedBrand(){
+        homePage.verifySelectedProductBrand();
+}
+@Test
+    public void VerifyUserShouldBeAbleToBuildYourOwnComputer(){
+        homePage.verifyUserShouldBeBuildYourOwnComputer();
+        buildYourOwnComputerDetailsPage.verifyUserShouldEnterAllDetailsOfBuildYourOwnComputer();
+        buildYourOwnComputerResultPage.productInShoppingCart();
+       buildYourOwnComputerResultPage.checkOut();
+       checkOutAsGuest.CheckOutAsGuestSuccessfully();
+       checkOutAsGuest.BillingAddress();
+        checkOutAsGuest.PaymentInformation();
+        orderConformationPage.verityUserShouldSeeOrderConformation();
+
+}
+@Test
+    public void VerifyUserShouldBeAbleToOpenFacebookWindow(){
+        homePage.verifyUserShouldGoFacebookWindow();
+        facebookPage.verifyUserShouldFacebookWindowOpen();
+        homePage.welcomeToOurStore();
+
+}
+
+
 }
